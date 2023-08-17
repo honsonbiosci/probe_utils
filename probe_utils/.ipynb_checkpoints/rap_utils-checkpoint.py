@@ -360,8 +360,7 @@ def seq_interpreter(file):
         contains multiple sequences, only the first will be returned.
     
     '''
-    okchars = ['A','T','C','G','\n',
-               'a','t','c','g']
+    okchars = ['A','T','C','G','a','t','c','g','\n']
     
     with open(file, 'r') as f:
         f_read = f.read()
@@ -391,7 +390,7 @@ to the first sequence will be generated.''')
         seq = seq[0].split('\n')
         seq = ''.join(seq[1:])
         
-    check = [i in okchars for i in seq]
+    check = [i in okchars[:-1] for i in seq]
     
     if all(check):
         pass
