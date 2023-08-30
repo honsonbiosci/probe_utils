@@ -18,7 +18,7 @@ for line in init:
 
 
 setup(
-    name='probe_utils',
+    name='probeutils',
     version=__version__,
     author=__author__,
     author_email=__email__,
