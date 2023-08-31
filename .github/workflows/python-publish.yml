@@ -32,5 +32,5 @@ jobs:
       run: twine upload dist/*
       env:
         TWINE_REPOSITORY_URL: https://upload.pypi.org/legacy/
-        TWINE_USERNAME: drewhonson
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PROBEUTILS_API_TOKEN }}
