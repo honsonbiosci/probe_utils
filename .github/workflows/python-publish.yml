@@ -22,7 +22,9 @@ jobs:
       # IMPORTANT: this permission is mandatory for trusted publishing
       id-token: write
     steps:
-      # retrieve your distributions here
-
-      - name: Publish package distributions to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
+    - name: Twine
+      run: twine upload dist/*
+      env:
+        TWINE_REPOSITORY_URL: https://pypi.org/project/probeutils/
+        TWINE_USERNAME: drewhonson
+        TWINE_PASSWORD: ${{ secrets.PROBEUTILS_API_TOKEN }}
