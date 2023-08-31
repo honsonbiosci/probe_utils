@@ -31,6 +31,6 @@ jobs:
     - name: Twine
       run: twine upload dist/*
       env:
-        TWINE_REPOSITORY_URL: https://pypi.org/project/probeutils/
+        TWINE_REPOSITORY_URL: https://upload.pypi.org/legacy/
         TWINE_USERNAME: drewhonson
         TWINE_PASSWORD: ${{ secrets.PROBEUTILS_API_TOKEN }}
