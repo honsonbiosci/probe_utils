@@ -23,7 +23,9 @@ jobs:
       id-token: write
     steps:
     - name: Install twine
-      run: pip install twine
+      run: pip install twine build
+    - name: Build
+      run: python -m build
     - name: Twine
       run: twine upload dist/*
       env:
